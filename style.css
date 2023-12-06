@@ -1,0 +1,40 @@
+/* HTML Elements */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    text-align: center;
+}
+
+
+/* By Class */
+.project{
+    position: absolute;
+    background-color: blueviolet;
+    height: 200px;
+    width: 300px;
+    transition: height 1s, width 1s, background-color 1s;
+}
+
+
+
+/* By ID */
+#control{
+    position: absolute;
+    background-color: aquamarine;
+    /* color: darkslategrey; */
+    height: 100px;
+    width: 100px;
+    top: 250px;
+    left: 600px;
+    transition: top 50ms, left 50ms;
+}
+
+
+
+/* Animation */
+.collided{
+    background-color: blue;
+    height: 240px;
+    width: 360px;
+}
