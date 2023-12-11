@@ -1,104 +1,49 @@
 console.log("check");
-let ypos = 250;
-let xpos = 600;
-let u = "px";
-let mouseDown = false;
 
 
 
 // // HTML Elements
-controlDiv = document.getElementById("control");
-mff = document.getElementById("30MFF");
-comic = document.getElementById("comic");
-sound = document.getElementById("sound");
-vid = document.getElementById("video");
+// Intro
+var intro = document.getElementById("intro-door");
+var doorway = intro.firstElementChild;
+var door = intro.firstElementChild.firstElementChild;
+
+// Main Room
+var main = document.getElementById("main-room");
+var projectSpace = document.getElementById("IM-projects");
+
+// Project Tabs (expanded view)
+var mff = document.getElementById("30MFF");
+var comic = document.getElementById("comic");
+var sound = document.getElementById("sound");
+var vid = document.getElementById("video");
 
 
 
 
 // // HTML Collections
-
+// TBD
 
 
 
 // // Event Listeners
-document.addEventListener("keydown", moveDiv);
-
-controlDiv.addEventListener('mousedown', function () {
-    mouseDown = true;}, true);
-
-window.addEventListener('mouseup', function () {
-    mouseDown = false;}, true);
-
-document.addEventListener('mousemove', function(event) {
-    event.preventDefault();
-    if (mouseDown) {
-        xpos = event.screenX;
-        controlDiv.style.left = xpos;
-        ypos = event.clientY;
-        controlDiv.style.top = ypos;
-    }}, true);
-
+door.addEventListener("click", openDoor);
 
 
 
 // // Functions
-// Move div when arrow keys or WASD are pressed
-function moveDiv(event) {
-    key = event.key;
-    switch(key) {
-        case ("ArrowUp"):
-        case ("w"):
-            if (ypos > 0) {
-                ypos -= 10;
-                controlDiv.style.top = ypos+u;
-            }
-            break;
-        case ("ArrowLeft"):
-        case ("a"):
-            if (xpos > 0) {
-                xpos -= 10;
-                controlDiv.style.left = xpos+u;
-            }
-            break;
-        case ("ArrowDown"):
-        case ("s"):
-            if (ypos < 640-controlDiv.offsetHeight) {
-                ypos += 10;
-                controlDiv.style.top = ypos+u;
-            }
-            break;
-        case ("ArrowRight"):
-        case ("d"):
-            if (xpos < 1280-controlDiv.offsetWidth) {
-                xpos += 10;
-                controlDiv.style.left = xpos+u;
-            }
-            break;
-        default:
-            console.log("default");
-    }
-    controlDiv.textContent = xpos + "," + ypos;
-    // Collision with project area
-    // 30MFF
-    if (ypos < 200 && xpos < 300) {
-        // mff.style.display = "none";
-        if (key == "Enter") {mff.classList.toggle("collided");}
-    }
-    else {mff.style.display = "block";}
-    // Comic
-    if (ypos < 200 && xpos > 880) {
-        comic.style.display = "none";
-        }
-    else {comic.style.display = "block";}
-    // Sound
-    if (ypos > 340 && xpos < 300) {
-        sound.style.display = "none";
-    }
-    else {sound.style.display = "block";}
-    // Video
-    if (ypos > 340 && xpos > 880) {
-        vid.style.display = "none";
-    }
-    else {vid.style.display = "block";}
+// Open intro door
+function openDoor() {
+    // play door creak / door opening noise
+    door.classList.toggle("doorOpen");
+    setTimeout(enterDoor, 1750);
+}
+// Enter through doorway
+function enterDoor() {
+    doorway.style.width = "48vh";
+    doorway.style.height = "72vh";
+    door.style.backgroundColor = "#333";
+    intro.style.backgroundColor = "#333";
+    setTimeout(function() {main.style.display = "block"; doorway.style.display = "none"; intro.style.opacity = "0";}, 2500);
+    setTimeout(function() {intro.style.display = "none";}, 3000);
 }

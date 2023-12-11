@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- import p5.js -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
@@ -9,18 +10,35 @@
 </head>
 <body>
     
-    <div id="content-area">
-        <div id="30MFF" class="project" style="top: 0px; left: 0px;">30MFF</div>
-        <div id="comic" class="project" style="top: 0px; right: 0px;">Comic</div>
-        <div id="sound" class="project" style="bottom: 0px; left: 0px;">Sound</div>
-        <div id="video" class="project" style="bottom: 0px; right: 0px;">Video</div>
+
+    <div id="audio-storage" style="display: none;">
+        <audio id="door-creak" src="./audio/door.mp3"></audio>
+        <audio id="pc-boot" src="./audio/pc.mp3"></audio>
+    </div>
+
+    <div id="intro-door" style="display: none;"> <!-- display block -->
+        <div class="doorway">
+            <div class="door"></div>
+        </div>
+    </div>
+
+    <main id="main-room"  style="display: block;"> <!-- display none -->
+        <div id="IM-icon"></div>
+        <div id="school-icon"></div>
+        <div id="main-doorway" class="doorway">
+            <div id="main-door" class="door doorOpen"></div>
+        </div>
+    </main>
+
+    <div id="IM-projects" style="display: none;">
+        <div id="project-back"></div>
+        <div id="30MFF" class="project" style="bottom: 51%; right: 50.5%;">30MFF</div>
+        <div id="comic" class="project" style="bottom: 51%; left: 50.5%;">Comic</div>
+        <div id="sound" class="project" style="top: 51%; right: 50.5%;">Sound</div>
+        <div id="video" class="project" style="top: 51%; left: 50.5%;">Video</div>
     </div>
 
     
-    
-    <div id="control">250,600</div>
-
-
     <script src="./script.js"></script>
 </body>
 </html>

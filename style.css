@@ -2,39 +2,115 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: bisque;
+    /* background-color: rgb(33, 41, 46); */
+    color: whitesmoke;
     text-align: center;
 }
 
 
-/* By Class */
+
+/* Intro Screen */
+#intro-door{
+    background-color: blanchedalmond;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    transition: background-color 1s ease-in 0.2s, opacity 1s;
+}
+.doorway{
+    background-color: #333;
+    position: relative;
+    width: 40vh; /* 200px */
+    height: 60vh; /* 300px */
+    margin: 0 auto;
+    margin-top: 100px;
+    transition: width 1s ease-out, height 1s ease-out;
+}
+.door{
+    background-color: brown;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    transition: all 1s ease-in-out;
+}
+.doorway:hover, .door:hover{
+    cursor: pointer;
+}
+.doorOpen{
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+
+
+/* IM Projects (expanded) */
+#project-back{
+    position: absolute; top: 30vh; left: 35vw; height: 40vh; width: 30vw; background-color: lightgrey;
+}
 .project{
     position: absolute;
-    background-color: blueviolet;
+    background-color: rgb(52,68,76);
+    height: 100px;
+    width: 150px;
+    transition: height 1s, width 1s, background-color 1s;
+    border: 2px solid rgb(49, 27, 17);
+}
+.project:hover{
     height: 200px;
     width: 300px;
-    transition: height 1s, width 1s, background-color 1s;
+    background-color: rgb(85, 119, 141);
+    cursor: pointer;
 }
 
 
 
-/* By ID */
-#control{
+/* Main Room */
+#main-room{
+    background-color: rgb(33, 41, 46);
     position: absolute;
-    background-color: aquamarine;
-    /* color: darkslategrey; */
-    height: 100px;
-    width: 100px;
-    top: 250px;
-    left: 600px;
-    transition: top 50ms, left 50ms;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
+#IM-icon{
+    background-color: blueviolet;
+    position: absolute;
+    top: 25vh;
+    left: 30vw;
+    height: 10vh;
+    width: 8vw;
+}
+#school-icon{
+    background-color: yellow;
+    position: absolute;
+    top: 25vh;
+    left: 40vw;
+    height: 10vh;
+    width: 8vw;
+}
+/* #main-doorway{
+
+}
+#main-door{
+
+} */
 
 
 
-/* Animation */
-.collided{
-    background-color: blue;
-    height: 240px;
-    width: 360px;
+
+
+
+
+/* Misc. Animation/Positioning classes */
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
 }
