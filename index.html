@@ -11,23 +11,27 @@
 <body>
     
 
-    <div id="audio-storage" style="display: none;">
-        <audio id="door-creak" src="./audio/door.mp3"></audio>
-        <audio id="pc-boot" src="./audio/pc.mp3"></audio>
+    <div id="media-storage" style="display: none;">
+        <audio id="door-creak" src="./audio/door.mp3">Audio not supported</audio>
+        <audio id="pc-boot" src="./audio/pc.mp3">Audio not supported</audio>
+
+
+        <video id="mariah" src="./video/mariah.mp4">Video not supported</video>
     </div>
 
-    <div id="intro-door" style="display: none;"> <!-- display block -->
+    <div id="intro-door" style="display: block;"> <!-- display block -->
         <div class="doorway">
             <div class="door"></div>
         </div>
+        <div id="nameplate" class="center">
+            <span>Kebede</span>
+        </div>
     </div>
 
-    <main id="main-room"  style="display: block;"> <!-- display none -->
+    <main id="main-room"  style="display: none;"> <!-- display none -->
         <div id="IM-icon"></div>
-        <div id="school-icon"></div>
-        <div id="main-doorway" class="doorway">
-            <div id="main-door" class="door doorOpen"></div>
-        </div>
+        <div id="academics-icon"></div>
+        <div id="main-doorway" class="doorway"></div>
     </main>
 
     <div id="IM-projects" style="display: none;">
@@ -36,9 +40,25 @@
         <div id="comic" class="project" style="bottom: 51%; left: 50.5%;">Comic</div>
         <div id="sound" class="project" style="top: 51%; right: 50.5%;">Sound</div>
         <div id="video" class="project" style="top: 51%; left: 50.5%;">Video</div>
+        <div id="exit-projects" class="exit"></div>
     </div>
 
-    
+    <div id="academics" style="display: none;">
+
+        <div id="exit-academics" class="exit"></div>
+    </div>
+
+    <div id="bedroom" style="display: none;">
+        <div id="PC"></div>
+        <div id="return-doorway" class="doorway"></div>
+    </div>
+
+    <div id="desktop" style="display: none;">
+
+        <div id="shutdown" class="exit"></div>
+    </div>
+
+
     <script src="./script.js"></script>
 </body>
 </html>
