@@ -7,6 +7,13 @@ body{
     text-align: center;
     /* overflow-x: hidden; */
 }
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
 
 
 
@@ -70,30 +77,33 @@ body{
     width: 100%;
 }
 #IM-icon{
-    background-color: blueviolet;
+    background-color: transparent; /* blueviolet */
     position: absolute;
-    top: 25vh;
-    left: 30vw;
-    height: 10vh;
-    width: 8vw;
+    top: 42vh;
+    left: 42vw;
+    height: 12vh;
+    width: 6vw;
 }
 #academics-icon{
-    background-color: yellow;
+    background-color: transparent; /* yellow */
     position: absolute;
-    top: 25vh;
-    left: 40vw;
-    height: 10vh;
-    width: 8vw;
+    top: 46vh;
+    left: 51vw;
+    height: 9vh;
+    width: 7vw;
 }
 #IM-icon:hover, #academics-icon:hover{
     cursor: pointer;
 }
 #main-doorway{
-    background-color: rgb(24,20,22);
-    width: 20vw;
-    height: 60vh;
-    margin-top: 120px;
-    margin-left: 15px;
+    background-color: transparent; /* rgb(24,20,22) */
+    width: 21vw;
+    height: 70vh;
+    position: absolute;
+    top: -1vh;
+    left: 6vw;
+    /* margin-top: 120px;
+    margin-left: 15px; */
 }
 
 
@@ -113,13 +123,14 @@ body{
     background-color: rgb(52,68,76);
     height: 100px;
     width: 150px;
-    transition: height 1s, width 1s, background-color 1s;
+    transition: height 1s, width 1s, background-color 1s, font-size 1s;
     border: 2px solid rgb(49, 27, 17);
 }
 .project:hover{
-    height: 200px;
-    width: 300px;
+    height: 300px;
+    width: 450px;
     background-color: rgb(85, 119, 141);
+    font-size: xx-large;
     cursor: pointer;
 }
 
@@ -143,22 +154,25 @@ body{
     width: 100%;
 }
 #PC{
-    background-color: rgb(46, 46, 46);
+    background-color: transparent; /* rgb(46, 46, 46) */
     position: absolute;
-    height: 20vh;
-    width: 20vw;
-    top: 20vh;
-    left: 60vw;
+    height: 15vh;
+    width: 14vw;
+    top: 41vh;
+    left: 68vw;
 }
 #PC:hover{
     cursor: pointer;
 }
 #return-doorway{
-    background-color: rgb(47, 2, 25);
-    width: 20vw;
-    height: 60vh;
-    margin-top: 120px;
-    margin-left: 15px;
+    background-color: transparent; /* rgb(47, 2, 25) */
+    width: 21vw;
+    height: 70vh;
+    position: absolute;
+    top: -1vh;
+    left: 6vw;
+    /* margin-top: 120px;
+    margin-left: 15px; */
 }
 
 
@@ -170,8 +184,71 @@ body{
     height: 100%;
     width: 100%;
 }
+.desktop-icon{
+    position: absolute;
+    max-height: 16vh;
+    max-width: 16vh;
+}
+.desktop-icon:hover{
+    cursor: pointer;
+}
+#recycle{
+    top: 2%;
+    left: 2%;
+}
+#folder{
+    max-width: 15vh;
+    top: 22%;
+    left: 1.5%;
+}
+#chrome{
+    max-width: 14vh;
+    top: 42%;
+    left: 1.5%;
+}
+#youtube{
+    top: 62%;
+    left: 1%;
+}
+#open-directory{
+    /* display: none; */
+    display: flex;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    height: 60vh;
+    width: 60vw;
+    padding: 20px;
+}
+.explorer-icon{
+    max-width: 10%;
+    max-height: 20%;
+    transition: max-width 1s, max-height 1s;
+}
+.explorer-icon:hover{
+    max-width: 40%;
+    max-height: 40%;
+}
+#mariah{
+    /* display: none; */
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+}
 
 
+
+#shutdown{
+    top: 2%;
+    right: 1%;
+    height: 8vh;
+    width: 8vh;
+}
 .exit{
     background-color: rgb(236, 20, 20);
     position: absolute;
@@ -193,4 +270,7 @@ body{
     align-items: center;
     text-align: center;
     /* min-height: 100vh; */
+}
+.hidden{
+    display: none;
 }

@@ -4,60 +4,297 @@
     <!-- import p5.js -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Matthias Kebede</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link rel="icon" href="./images/icon.png"/>
+    <link rel="icon" href="./images/folder.png"/>
 </head>
 <body>
     
 
+
     <div id="media-storage" style="display: none;">
         <audio id="door-creak" src="./audio/door.mp3">Audio not supported</audio>
-        <audio id="pc-boot" src="./audio/pc.mp3">Audio not supported</audio>
+        <audio id="pc-boot" src="./audio/startup.mp3">Audio not supported</audio>
+        <audio id="xp-shutdown" src="./audio/shutdown.mp3">Audio not supported</audio>
     </div>
+
+
+
+
+
 
     <div id="intro-door" style="display: block;"> <!-- display block -->
         <div class="doorway">
             <div class="door">
                 <div id="nameplate">
-                    <span style="margin-top: 30%;">Kebede</span>
+                    <br><span>Kebede</span>
                 </div>
             </div>
         </div>
-        <!-- <div id="nameplate" class="center">
-            <span>Kebede</span>
-        </div> -->
     </div>
 
+
+
+
+
     <main id="main-room"  style="display: none;"> <!-- display none -->
+        <svg version="1.1" id="main-room" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+            <style type="text/css">
+                .st0{fill:#C2B4B4;}
+                .st1{fill:#7A7373;}
+                .st2{fill:#1E1C05;stroke:#603813;stroke-width:10;stroke-miterlimit:10;}
+                .st3{fill:#595050;}
+                .st4{fill:#FFF145;stroke:#000000;stroke-miterlimit:10;}
+                .st5{fill:#CCCCCC;}
+                .st6{fill:#CEE4FA;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+                .st7{fill:#573F50;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+                .st8{fill:#D6D05B;stroke:#000000;stroke-miterlimit:10;}
+                .st9{font-family:'ComicSansMS';}
+                .st10{font-size:12px;}
+                .st11{fill:#EFE560;stroke:#000000;stroke-miterlimit:10;}
+                .st12{fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+                .st13{fill:#EDEBD6;stroke:#603813;stroke-width:5;stroke-miterlimit:10;}
+                .st14{fill:#FFFEF8;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+                .st15{font-family:'Impact';}
+                .st16{fill:#F2DF76;}
+            </style>
+            <g id="main-back">
+                <rect x="0.5" y="0.5" class="st0" width="1919" height="1079"/>
+                <path d="M1919,1v1078H1V1H1919 M1920,0H0v1080h1920V0L1920,0z"/>
+            </g>
+            <g id="main-floor">
+                <rect y="911" class="st1" width="1920" height="169"/>
+            </g>
+            <rect id="main-doorway-svg" x="16" y="161" class="st2" width="436" height="750"/>
+            <g id="shelf-back">
+                <rect x="712.5" y="267.5" class="st3" width="495" height="686"/>
+                <path d="M1207,268v685H713V268H1207 M1208,267H712v687h496V267L1208,267z"/>
+            </g>
+            <g id="lightswitch">
+                <path id="lightbulb" class="st4" d="M1835.1,80v15.7h20.4V80c0,0,10.1-14.1,9.4-26.7c-0.8-14.1-18.8-27.5-33-12.6
+                    C1817.8,55.6,1835.1,80,1835.1,80z"/>
+                <g id="lightbase">
+                    <rect x="1834.8" y="81.7" class="st5" width="21" height="14.7"/>
+                    <path d="M1855.3,82.2v13.7h-20V82.2H1855.3 M1856.3,81.2h-22v15.7h22V81.2L1856.3,81.2z"/>
+                </g>
+            </g>
+            <rect id="glass" x="723.5" y="279.5" class="st6" width="473" height="484.5"/>
+            <g id="shelves">
+                <g id="top-shelf">
+                    <rect x="724.5" y="423.5" class="st3" width="472" height="9"/>
+                    <path d="M1196,424v8H725v-8H1196 M1197,423H724v10h473V423L1197,423z"/>
+                </g>
+                <g id="bottom-shelf">
+                    <rect x="724.5" y="594.5" class="st3" width="472" height="10"/>
+                    <path d="M1196,595v9H725v-9H1196 M1197,594H724v11h473V594L1197,594z"/>
+                </g>
+            </g>
+            <g id="trophy">
+                <rect id="trophy-base" x="781" y="585" class="st7" width="136" height="11"/>
+                <rect id="plaque-base" x="789" y="559" class="st7" width="120" height="26"/>
+                <rect x="796.5" y="563.5" class="st8" width="105" height="16"/>
+                <text transform="matrix(1 0 0 1 816.7393 575.5)" class="st9 st10">COMM LAB</text>
+                <g id="trophy-cup">
+                    <path class="st11" d="M866.5,534.1c-6.2-10.8-7-24.4-7-24.4h-19c0,0-1,7.5-7,21.6c-6,14.1-25,20.4-25,20.4v6.8h80.1v-6.8
+                        C888.6,551.7,873.5,546.3,866.5,534.1z"/>
+                    <line class="st12" x1="808.5" y1="551.5" x2="888.5" y2="551.5"/>
+                    <path class="st11" d="M872.6,507.8c0.6,0.1,1.4,0.2,2.2,0.2c14,0,20.7-20.4,22.4-26.3c0.2-0.8-0.4-1.6-1.3-1.6h-14.3
+                        c0,0-0.8,1.9-2,3.4h13.2c0,0-5.4,21.6-18.4,21.6c-0.4,0-0.8,0-1.2-0.1L872.6,507.8z"/>
+                    <path class="st11" d="M827.8,507.9c-0.6,0.1-1.4,0.2-2.2,0.2c-14,0-20.7-20.4-22.4-26.3c-0.2-0.8,0.4-1.6,1.3-1.6h14.3
+                        c0,0,0.8,1.9,2,3.4h-13.2c0,0,5.4,21.6,18.4,21.6c0.4,0,0.8,0,1.2-0.1L827.8,507.9z"/>
+                    <path class="st11" d="M818.5,468c0,0-1,59.1,31,59.1s32.2-59.1,32.2-59.1H818.5z"/>
+                </g>
+            </g>
+            <g id="diploma">
+                <rect id="diploma-frame" x="987.5" y="494.5" class="st13" width="145" height="99.2"/>
+                <rect id="diploma-mid" x="1005.5" y="508.5" class="st14" width="109" height="71"/>
+                <text transform="matrix(1 0 0 1 1038.9648 538.4658)" class="st15 st10">DIPLOMA</text>
+                <circle id="diploma-seal" class="st16" cx="1060.5" cy="565.5" r="6.5"/>
+            </g>
+        </svg>
         <div id="IM-icon"></div>
         <div id="academics-icon"></div>
         <div id="main-doorway" class="doorway"></div>
+        <div id="dimmer" class="hidden" style="position: absolute; height: 100%; width: 100%; background-color: rgba(0,0,0,0.8);"></div>
+        <div id="dim-switch" class="exit" style="background-color: transparent; width: 6vw;"></div>
     </main>
+
+
+
+
 
     <div id="IM-projects" style="display: none;">
         <div id="project-back"></div>
         <div id="30MFF" class="project" style="bottom: 51%; right: 50.5%;">30MFF</div>
-        <div id="comic" class="project" style="bottom: 51%; left: 50.5%;">Comic</div>
-        <div id="sound" class="project" style="top: 51%; right: 50.5%;">Sound</div>
-        <div id="video" class="project" style="top: 51%; left: 50.5%;">Video</div>
+        <div id="comic" class="project" style="bottom: 51%; left: 50.5%;">
+            <span>Comic</span>
+            <br> <br>
+            <img style="max-height: 50%; max-width: 50%;" src="./images/comic2.png">
+        </div>
+        <div id="sound" class="project" style="top: 51%; right: 50.5%;">
+            <span>Sound</span>
+            <br> <br>
+            <img style="max-height: 50%; max-width: 50%;" src="./images/tape.png">
+        </div>
+        <div id="video" class="project" style="top: 51%; left: 50.5%;">
+            <span>Video</span>
+            <br> <br>
+            <img style="max-height: 50%; max-width: 50%;" src="./images/camera.png">
+        </div>
         <div id="exit-projects" class="exit"></div>
     </div>
+
+
+
+
 
     <div id="academics" style="display: none;">
 
         <div id="exit-academics" class="exit"></div>
     </div>
 
+
+
+
+
     <div id="bedroom" style="display: none;">
-        <div id="PC"></div>
+        <svg version="1.1" id="bedroom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+            <style type="text/css">
+                .st17{fill:#98B591;}
+                .st18{fill:#382B2B;}
+                .st19{fill:#02211F;stroke:#722000;stroke-width:10;stroke-miterlimit:10;}
+                .st20{fill:#F2F2F2;stroke:#000000;stroke-miterlimit:10;}
+                .st21{opacity:0.5;}
+                .st22{fill:#7F573A;stroke:#000000;stroke-miterlimit:10;}
+                .st23{fill:#4C4731;stroke:#000000;stroke-miterlimit:10;}
+                .st24{fill:#6B6A65;stroke:#000000;stroke-miterlimit:10;}
+                .st25{fill:#1A1A1A;stroke:#000000;stroke-miterlimit:10;}
+                .st26{fill:#1A1A1A;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+            </style>
+            <g id="bedroom-back">
+                <rect x="0.5" y="0.5" class="st17" width="1919" height="1079"/>
+                <path d="M1919,1v1078H1V1H1919 M1920,0H0v1080h1920V0L1920,0z"/>
+            </g>
+            <g id="bedroom-floor">
+                <rect y="911" class="st18" width="1920" height="169"/>
+            </g>
+            <rect id="bedroom-doorway-svg" x="16" y="161" class="st19" width="436" height="750"/>
+            <g id="pc-tower">
+                <rect id="pc-front" x="1695.5" y="794.5" class="st20" width="127" height="172"/>
+                <polygon id="pc-side" class="st20" points="1829.5,963.5 1822.5,966.5 1822.5,794.5 1829.5,791.5 	"/>
+                <polygon id="pc-top" class="st20" points="1822.5,793.5 1695.5,793.5 1708.5,791.5 1829.5,791.5 	"/>
+            </g>
+            <g id="desk">
+                <rect id="desk-shadow" x="1173" y="761" class="st21" width="662" height="206"/>
+                <polygon id="desk-frame" class="st22" points="1138,308 1138,967 1173,967 1173,761 1835,761 1835,967 1870,967 1870,308 	"/>
+                <rect id="desk-overhang" x="1153" y="325" class="st23" width="702" height="276"/>
+                <rect id="desk-surface" x="1153" y="601" class="st24" width="702" height="133"/>
+            </g>
+            <g id="pc-peripherals">
+                <rect id="monitor-stand-base" x="1467.4" y="629.5" class="st25" width="79.8" height="21"/>
+                <rect id="monitor-stand-neck" x="1498.5" y="596.5" class="st25" width="18" height="41"/>
+                <rect id="monitor-screen" x="1363.5" y="441.5" class="st26" width="288" height="155"/>
+                <polygon id="keyboard" class="st25" points="1606.5,706.5 1354.5,706.5 1359.5,667.5 1611.5,667.5 	"/>
+                <path id="mouse" class="st25" d="M1654.3,696.8l-8-0.6c-2.1-0.2-3.7-2-3.5-4.1l1.4-18.4c0.2-2.1,2-3.7,4.1-3.5l8,0.6
+                    c2.1,0.2,3.7,2,3.5,4.1l-1.4,18.4C1658.2,695.4,1656.4,696.9,1654.3,696.8z"/>
+            </g>
+        </svg>
+        <div id="PC" onmouseover="monitorCheck(false)" onmouseout="monitorCheck(true)"></div>
         <div id="return-doorway" class="doorway"></div>
     </div>
 
+
+
+
+
     <div id="desktop" style="display: none;">
-        <video id="mariah" src="./video/mariah.mp4">Video not supported</video>
-        <div id="shutdown" class="exit"></div>
+        <svg version="1.1" id="desktop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+            <style type="text/css">
+                .st27{fill:rgb(187, 236, 220);}
+                <!-- .st28{fill:none;stroke:#000000;stroke-miterlimit:10;} -->
+                .st28{fill:url(#MyGradient);}
+                .st29{fill:#282828;stroke:#000000;stroke-miterlimit:10;}
+                .st30{fill:#FF0000;stroke:#000000;stroke-miterlimit:10;}
+                .st31{fill:#FFFFFF;}
+            </style>
+            <g id="desktop-back">
+
+
+                <defs>
+                    <radialGradient id="MyGradient" cx="10%" cy="50%" r="100%" fx="50%" fy="50%">
+                        <stop offset="0%" stop-color="#040467" stop-opacity="1"/>
+                        <stop offset="20%" stop-color="#6363e3" stop-opacity="1"/>
+                        <stop offset="80%" stop-color="#66e5ff" stop-opacity="1"/>
+
+                      </radialGradient>
+                </defs>
+
+
+                <!-- .st27{clip-path:url(#SVGID_00000101793935019370641740000008470553113696552335_);}
+                <g>
+                    <defs>
+                        <rect id="SVGID_00000065062075070262004910000014000183941184817572_" x="0.5" y="0.5" width="1920" height="1080"/>
+                    </defs>
+                    <clipPath id="SVGID_00000007428045964789604840000014239680022462194104_">
+                        <use xlink:href="#SVGID_00000065062075070262004910000014000183941184817572_"  style="overflow:visible;"/>
+                    </clipPath>
+                    <g style="clip-path:url(#SVGID_00000007428045964789604840000014239680022462194104_);">
+                    </g>
+                </g> -->
+                <rect x="0.5" y="0.5" class="st27" width="1920" height="1080"/>
+            </g>
+            <rect id="desktop-screensaver" x="-0.5" y="0.5" class="st28" width="1920" height="1080"/>
+            <g id="youtube-playbutton" style="display: none;">
+                <path id="youtube-red" class="st30" d="M1048.9,639.5H871.1c-34,0-61.6-27.6-61.6-61.6v-75.8c0-34,27.6-61.6,61.6-61.6h177.8
+                    c34,0,61.6,27.6,61.6,61.6v75.8C1110.5,611.9,1082.9,639.5,1048.9,639.5z"/>
+                <polygon id="youtube-white" class="st31" points="939,496.3 939,583.7 1004.2,540 	"/>
+            </g>
+        </svg>
+        <img id="recycle" class="desktop-icon" src="./images/recycle.png"> <!--  onclick="openProgram(this)" -->
+        <img id="folder" class="desktop-icon" src="./images/folder.png">
+        <img id="chrome" class="desktop-icon" src="./images/chrome-icon.png">
+        <img id="youtube" class="desktop-icon" src="./images/youtube-icon.png">
+
+        <div id="directory-wrapper" class="hidden">
+            <div id="open-directory">
+                <img class="explorer-icon" src="./images/Advertising Poster.png">
+                <img class="explorer-icon" src="./images/Barcode Design.jpg">
+                <img class="explorer-icon" src="./images/Collage.jpg">
+                <img class="explorer-icon" src="./images/Elements.jpg">
+                <img class="explorer-icon" src="./images/Environmental Badge.png">
+                <img class="explorer-icon" src="./images/Expressive Words.jpg">
+                <img class="explorer-icon" src="./images/Food Based Logo.jpg">
+                <img class="explorer-icon" src="./images/Glowing Lines.jpg">
+                <img class="explorer-icon" src="./images/Jones Soda Bottle Label.png">
+                <img class="explorer-icon" src="./images/Lit Text.jpg">
+                <img class="explorer-icon" src="./images/Mars.png">
+                <img class="explorer-icon" src="./images/Minimalist Movie Poster.jpg">
+                <img class="explorer-icon" src="./images/Modern Griffin Logo.jpg">
+                <img class="explorer-icon" src="./images/National Park Shirt.png">
+                <img class="explorer-icon" src="./images/New Yorker Cover.jpg">
+                <img class="explorer-icon" src="./images/Pen Tool.png">
+                <img class="explorer-icon" src="./images/Saturn.png">
+                <img class="explorer-icon" src="./images/Shading Practice.jpg">
+                <img class="explorer-icon" src="./images/Text Portrait.png">
+                <img class="explorer-icon" src="./images/TinyPlanet1.jpg">
+                <img class="explorer-icon" src="./images/TinyPlanet2.jpg">
+                <img class="explorer-icon" src="./images/TinyPlanet3.jpg">
+                <img class="explorer-icon" src="./images/Vase Flowers.png">
+                <img class="explorer-icon" src="./images/Vector Food.png">
+                <img class="explorer-icon" src="./images/Vector Vehicle.png">
+                <img class="explorer-icon" src="./images/Venus Frog.jpg">
+                <img class="explorer-icon" src="./images/Water Cup.jpg">
+            </div>
+        </div>
+
+        <video id="mariah" src="./video/Mariah.mp4" controls style="display: none;">Video not supported</video>
+        <img id="shutdown" class="desktop-icon" src="./images/power.png">
+        <!-- <div id="shutdown" class="exit"></div> -->
     </div>
+
 
 
     <script src="./script.js"></script>

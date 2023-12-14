@@ -8,12 +8,15 @@ var intro = document.getElementById("intro-door");
 var doorway = intro.firstElementChild;
 var door = intro.firstElementChild.firstElementChild;
 var nameplate = document.getElementById("nameplate");
+var doorSound = document.getElementById("door-creak");
 
 // Main Room
 var main = document.getElementById("main-room");
 var projectIcon = document.getElementById("IM-icon");
 var academicsIcon = document.getElementById("academics-icon");
 var mainDoor = document.getElementById("main-doorway");
+var dimmer = document.getElementById("dimmer");
+var dimSwitch = document.getElementById("dim-switch");
 
 // Project Tabs (expanded view)
 var projectSpace = document.getElementById("IM-projects");
@@ -31,13 +34,21 @@ var exitAcademics = document.getElementById("exit-academics");
 // Bedroom
 var bedroom = document.getElementById("bedroom");
 var pc = document.getElementById("PC");
-
+var monitorScreen = document.getElementById("monitor-screen");
+var bootSound = document.getElementById("pc-boot");
 var returnDoor = document.getElementById("return-doorway");
 
 // Desktop
 var desktop = document.getElementById("desktop");
-
+var recyclingBin = document.getElementById("recycle");
+var folder = document.getElementById("folder");
+var googleChrome = document.getElementById("chrome");
+var youTube = document.getElementById("youtube");
+var directoryWrapper = document.getElementById("directory-wrapper");
+var fileExplorer = document.getElementById("open-directory");
+var mariah = document.getElementById("mariah");
 var shutdown = document.getElementById("shutdown");
+var windowsXP = document.getElementById("xp-shutdown");
 
 
 
@@ -57,6 +68,8 @@ exitProjects.addEventListener("click", goMain);
 exitAcademics.addEventListener("click", goMain);
 pc.addEventListener("click", bootPC);
 shutdown.addEventListener("click", powerOff);
+// Main Room
+dimSwitch.addEventListener("click", function() {dimmer.classList.toggle("hidden")});
 // Project Space
 mff.addEventListener("click", function() {window.open("https://matthiaskebede.github.io/30MFF/")});
 comic.addEventListener("click", function() {window.open("https://matthiaskebede.github.io/Interactive-Comic/")});
@@ -65,7 +78,19 @@ vid.addEventListener("click", function() {window.open("https://matthiaskebede.gi
 // Academics Space
 
 // Desktop
-
+recyclingBin.addEventListener("click", event => {});
+folder.addEventListener("click", function() {directoryWrapper.classList.toggle("hidden")});
+googleChrome.addEventListener("click", function() {window.open("https://www.google.com")});
+youTube.addEventListener("click", function() {
+    if (mariah.style.display == "none") {
+        mariah.style.display = "block";
+    }
+    else {
+        mariah.pause();
+        mariah.style.display = "none";
+        mariah.currentTime = 0;
+    }
+});
 
 
 
@@ -75,6 +100,7 @@ function openDoor() {
     // play door creak / door opening noise
     door.classList.toggle("doorOpen");
     nameplate.style.opacity = 0;
+    doorSound.play();
     setTimeout(enterDoor, 1750);
 }
 // Enter through doorway
@@ -109,13 +135,41 @@ function enterRoom() {
     bedroom.style.display = "block";
     main.style.display = "none";
 }
+// Highlight Monitor screen
+function monitorCheck(illuminated) {
+    if (illuminated) {
+        monitorScreen.style.fill = "#1A1A1A";
+    }
+    else {
+        monitorScreen.style.fill = "Lightgrey";
+    }
+}
 // Enter Desktop
 function bootPC() {
+    bootSound.currentTime = 0;
+    bootSound.play()
     desktop.style.display = "block";
     bedroom.style.display = "none";
 }
+// // Open a program
+// function openProgram(event) {
+//     console.log(event);
+//     switch (event) {
+//         case folder:
+//             folder.style.display = "none";
+//     }
+// }
 // Exit Desktop
 function powerOff() {
+    if (mariah) {
+        mariah.pause();
+        mariah.style.display = "none";
+        mariah.currentTime = 0;
+    }
+    if (directoryWrapper) {
+        directoryWrapper.classList.toggle("hidden");
+    }
+
     bedroom.style.display = "block";
     desktop.style.display = "none";
 }
